@@ -1,0 +1,121 @@
+:root {
+    /* PRIMARY COLORS */
+    --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    /* SECUNDARY COLORS */
+    --clr-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+    /* FONTS */
+    --serif-font: 'Fraunces', serif;
+    --sans-serif-font: 'Montserrat', sans-serif;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-cream);
+    font-family: var(--sans-serif-font);
+    font-weight: 500;
+    font-size: 0.885rem;
+    color: var(--clr-dark-grayish-blue);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 0 1rem;
+
+}
+
+.container {
+    --ctr-padding: 1.5rem;
+    --ctr-gap: 1rem;
+
+    display: grid;
+    background-color: var(--clr-white);
+    border-radius: .5rem;
+    overflow: hidden;
+    max-width: 600px;
+    min-width: 375px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.texts-content {
+    padding: var(--ctr-padding);
+    display: grid;
+    gap: var(--ctr-gap);
+
+}
+
+.texts-content span {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.75rem;
+}
+
+.texts-content h1 {
+    font-family: var(--serif-font);
+    color: var(--clr-very-dark-blue);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.texts-content p {
+    line-height: 1.45rem;
+}
+
+.price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.price h2 {
+    font-family: var(--serif-font);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--clr-dark-cyan);
+}
+
+.price h3 {
+    font-size: .85rem;
+    text-decoration: line-through;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .9rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--clr-dark-cyan);
+    color: var(--clr-white);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+button img {
+    margin-right: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(159, 44%, 24%);
+}
